@@ -50,13 +50,15 @@ found in a different database, thus an application for each database is needed.
 
 For the `pamMaster` account this is the application used. The account is found in the database `postgre`.
 
-![PostgreSQL Application for pamMaster](/docs/PostgreSQL-application-pamMaster-1.png)
-![PostgreSQL Application for pamMaster](/docs/PostgreSQL-application-pamMaster-2.png)
+![PostgreSQL Application for postgres database](/docs/PostgreSQL-application-postgres-1.png)
+![PostgreSQL Application for postgres database](/docs/PostgreSQL-application-postgres-2.png)
 
 For the dependent `adm1` account this is the application used. The account is found in the database `testdb`.
 
-![PostgreSQL Application for adm1](/docs/PostgreSQL-application-adm1-1.png)
-![PostgreSQL Application for adm1](/docs/PostgreSQL-application-adm1-2.png)
+There are two applications used, one for accounts found in the `postgres` database and one for 
+accounts found in the `testdb` database.
+
+![PostgreSQL Applications](/docs/PostgreSQL-applications.png)
 
 
 The fields used are:
