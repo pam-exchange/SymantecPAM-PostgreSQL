@@ -1,0 +1,14 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample spec for our REST API",
+    "version" : "v1",
+    "title" : "Swagger spec for our REST API"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "ConnectorService"
+  } ],
+  "schemes" : [ "http", "https" ]
+}

@@ -1,0 +1,70 @@
+{
+    "account": {
+        "uiDefinition": {
+            "tabs": [{
+                "id": "PostgreSQLAccDetail",
+                "label": "PostgreSQL",
+                "fields": [{
+                    "type": "RADIO",
+                    "field": "changeProcess",
+                    "label": "Change Process",
+                    "value": "own",
+                    "values": [{
+                         "label": "Account can change own password",
+                         "value": "own"
+                    },{
+                         "label": "Use the following account to change password",
+                         "value": "other"
+                    }]
+                }, {
+                    "type": "TARGETACCOUNT",
+					     "field": "otherAccount",
+					     "label": "Master account"
+                }]
+            }]
+        }
+    },
+    
+    "application": {
+        "uiDefinition": {
+            "tabs": [{
+                "id": "PostgreSQLAppDetail",
+                "label": "PostgreSQL",
+                "fields": [{
+                    "type": "TEXT",
+                    "field": "database",
+                    "label": "Database name",
+                    "required": true,
+                    "maxLength": 64
+                }, {
+                    "type": "NUMBER",
+                    "field": "connectionTimeout",
+                    "label": "Connection Timeout",
+                    "required": false,
+                    "minValue": 1,
+                    "value": 10000
+                }, {
+                    "type": "NUMBER",
+                    "field": "loginTimeout",
+                    "label": "Login Timeout",
+                    "required": false,
+                    "minValue": 1,
+                    "value": 2000
+                }, {
+                    "type": "NUMBER",
+                    "field": "port",
+                    "label": "Port",
+                    "required": false,
+                    "minValue": 0,
+                    "maxValue": 65535,
+                    "value": 5432
+                }, {
+                    "type": "CHECKBOX",
+                    "field": "useTLS",
+                    "label": "Use TLS",
+                    "value": false
+                }]
+            }]
+        }
+    }
+}
