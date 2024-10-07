@@ -86,12 +86,15 @@ This is the port used when communicating to the PostgreSQL server.
 ### Account
 
 The account information for `pamMaster` account is fairly simple. If the account is in a different database
-than the dependent accounts different applications are used.
+than the dependent accounts different applications are used. For account changing their own password, i.e. a 
+master account, the current and known password for the account is entered.
 
 ![PostgreSQL Account-pamMaster](/docs/PostgreSQL-account-pamMaster-1.png)
 ![PostgreSQL Account-pamMaster](/docs/PostgreSQL-account-pamMaster-2.png)
 
 The dependent account `adm1` is found in a different database and uses a different application.
+For dependent accounts it is not necessary to know the current password. Let PAM generate a new 
+random password for the account.
 
 ![PostgreSQL Account-adm1](/docs/PostgreSQL-account-adm1-1.png)
 ![PostgreSQL Account-adm1](/docs/PostgreSQL-account-adm1-2.png)
